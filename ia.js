@@ -1,5 +1,5 @@
-const axios = require('axios');
-const http = require('http');
+import axios  from 'axios';
+import http from 'http';
 
 const config = {
   headers: {

@@ -1,6 +1,10 @@
-import express from 'express'
-import {createServer} from 'http'
-import {Server} from 'socket.io'
+import express from 'express';
+import {createServer} from 'http';
+import {Server} from 'socket.io';
+import path from 'node:path';
+import { fileURLToPath } from 'url';
+
+
 import {LlamaModel, LlamaContext, LlamaChatSession} from "node-llama-cpp";
 
 
@@ -18,6 +22,18 @@ const app = express()
 const server = createServer(app)
 
 const io = new Server(server)
+
+io.on("connection", (soc) => {
+    console.log("Connection is on");
+    soc.on("message" , async (msg) => {
+    const bot_reply = await session.prompt(msg);
+    soc.emit("response" , bot_reply);
+
+
+    });
+});
+
+
 
 const PORT = process.env.PORT || 8081
 
