@@ -31,7 +31,7 @@ São arquivos apenas para demonstrar que busquei um conhecimento mais profundo d
 
 As consultas ao modelo de GPT são configuradas com os seguintes parâmetros:
 
-input_data: Esta é a parte onde você fornece os dados de entrada para o modelo. Parece que você está enviando uma lista de strings de entrada, onde cada string tem um papel (role) e um conteúdo (content). Neste caso, o papel é 'user', indicando que é o texto fornecido pelo usuário.
+input_data: Esta é a parte onde você fornece os dados de entrada para o modelo. O modelo está enviando uma lista de strings de entrada, onde cada string tem um papel (role) e um conteúdo (content). Neste caso, o papel é 'user', indicando que é o texto fornecido pelo usuário.
 
 parameters: Estes são os parâmetros de configuração para a geração de texto pelo modelo. Aqui estão os parâmetros utilizados->
     temperature: Controla a aleatoriedade da geração de texto. Quanto maior o valor, mais aleatório o texto gerado. 0.6 é um valor moderado.
