@@ -1,5 +1,5 @@
 ## Descrição 
-Este é o repositório do projeto API RiverData.
+Este é o repositório do projeto API gpt-api.
 
 ## Instalação 
 
@@ -8,7 +8,7 @@ $ yarn
 ```
 
 Ao clonar, no repositorio raiz de o comando yarn para instalar os pacotes.
-Adicione o token no campo 'Authorization ->  /api-riverdata/src/config/config.js
+Adicione o token no campo 'Authorization ->  /gpt-api/src/config/config.js
 pra rodar o projeto pode utilizar o meio padrão e genérico dentro da pasta /api-riverdata/src/ - > node app.js 
 
 O projeto está rodando em http://localhost:3000/
@@ -20,10 +20,10 @@ Este projeto consiste em uma API que faz consultas em um modelo de GPT. Em um es
 
 ## Arquivos
 
-socket2.js: Este arquivo, localizado em /api-riverdata/src/controllers/socket2.js, é um script genérico para rodar o projeto sem a lógica implementada.
+socket2.js: Este arquivo, localizado em /gpt-api/src/controllers/socket2.js, é um script genérico para rodar o projeto sem a lógica implementada.
 
 
-O arquivo gpt.js /api-riverdata/src/utils/gpt.js é apenas um breve exemplo caso fosse utilizar um llama2 com um model de gpt de forma local.
+O arquivo gpt.js /gpt-api/src/utils/gpt.js é apenas um breve exemplo caso fosse utilizar um llama2 com um model de gpt de forma local.
 São arquivos apenas para demonstrar que busquei um conhecimento mais profundo da tecnologia.
 
 
@@ -42,6 +42,6 @@ parameters: Estes são os parâmetros de configuração para a geração de text
 ## Lógica adicional
 
 Eu apliquei também uma lógica utilizando um pouco da matemática para avaliar a entrada da consulta e filtrar se está associada ao tema “Dipirona”. Baseado nessa lógica, se o usuário setar apenas 3 palavras contidas em 
-perguntasRespostas -> /api-riverdata/src/utils/perguntasRespostas.js na hora da consulta, através da lógica ele vai considerar como true e utilizar a consulta focada no médicamento do dipirona dadosSemelhantes -> /api-riverdata/src/utils/dadosSemelhantes.js, através da função verificarSemelhança ele verifica se a similaridade > 0.4(Essa verificação que está calculada em 3 palavras, a precisão da contagem varia do aumento ou diminuição do campo 0.4)
+perguntasRespostas -> /gpt-api/src/utils/perguntasRespostas.js na hora da consulta, através da lógica ele vai considerar como true e utilizar a consulta focada no médicamento do dipirona dadosSemelhantes -> /gpt-api/src/utils/dadosSemelhantes.js, através da função verificarSemelhança ele verifica se a similaridade > 0.4(Essa verificação que está calculada em 3 palavras, a precisão da contagem varia do aumento ou diminuição do campo 0.4)
 
 
